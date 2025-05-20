@@ -1,0 +1,39 @@
+
+.center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    #block {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    #block a {
+        margin-left: 10px;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    
+    #block a:hover {
+        background-color: #0056b3;
+    }
+    .thumbnail {
+        width: 500px; /*عرض ریاضی*/
+        height: 500px; /*طول ریاضی*/
+        border: 2px solid #ccc; 
+        border-radius: 5px; 
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* سایه برای زیبای*/
+    }
+    body{
+        margin: 0;
+        height: 100vh;
+     background: linear-gradient(-45deg #7052dd, #5dea2e, #f9d03b,);
+    background-size: 480%, 480%;
+    animation: bg 12s ease infinite;
+    }

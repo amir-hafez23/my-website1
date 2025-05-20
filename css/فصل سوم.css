@@ -1,0 +1,134 @@
+h1 {
+    text-align: center;
+}
+body {
+    background-color: rgb(102, 209, 30);
+    transition: background-color 0.5s, color 0.5s;
+}
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+.light-mode {
+    background-color: rgb(102, 209, 30);
+    color: #000;
+}
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+}
+input:checked + .slider {
+    background-color: #522ba7;
+}
+input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.radio-container input:checked ~ .checkmark {
+    background-color: #007bff;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.radio-container input:checked ~ .checkmark:after {
+    display: block;
+}
+.radio-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+button {
+height: 40px;
+margin: 5px;
+width: 120px;
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+font-size: 16px;
+color: #fff;
+border: none;
+border-radius: 5px;
+background: linear-gradient(145deg, #9c27b0, #f44336, #ff9800, #ffc107, #8bc34a, #4caf50, #2196f3, #03a9f4, #00bcd4, #009688);
+background-size: 200%;
+background-position: 0%;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25), inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+background-position: 100%;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), inset 0px -2px 0px rgba(255, 255, 255, 0.2);
+}
+
+button:focus {
+outline: none;
+}
+
+button:active {
+background-size: 100%;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25), inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}

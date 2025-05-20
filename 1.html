@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    body {
+        background-color: rgb(102, 209, 30);
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    /* Light mode styles */
+    body.light-mode {
+        background-color: white;
+        color: black;
+    }
+    /* Dark mode styles */
+    body.dark-mode {
+        background-color: black;
+        color: white;
+    }
+    .container {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="file"] {
+        margin-bottom: 20px;
+    }
+    input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .thumbnail {
+        width: 150px; /* Set the desired width for the thumbnail */
+        height: auto; /* Maintain aspect ratio */
+        border: 2px solid #ccc; /* Optional: Add a border */
+        border-radius: 5px; /* Optional: Rounded corners */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
+    }
+    #prodact, #two {
+        width: 85%;
+        height: 200px;
+        margin: 50px auto;
+    }
+    #auth-buttons {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    #auth-buttons a {
+        margin-left: 10px;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    #auth-buttons a:hover {
+        background-color: #0056b3;
+    }
+    .tooc{
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        background-color: aqua;
+        animation: pulse 1.5s infinite;
+    }
+    </style>
+</head>
+<body>
+    <div id="tooc"></div>
+    <main>
+        <section id="game"></section>
+        <section>
+            <img src="https://imgurl.ir/uploads/u121117_Untitled-1_thumb.png" alt="u121117_Untitled-1.png" class="center" />
+        </section>
+        <section id="prodact">
+            <a href="فصل یک.html">
+                <img src="https://imgurl.ir/uploads/z408505_Untitled-2_thumb.png" class="thumbnail" alt="Season One Thumbnail" />
+            </a>
+            <a href="فصل دوم.html"><img src="https://imgurl.ir/uploads/z21360_5_thumb.png" class="thumbnail" alt="z21360_5.png" /></a>
+            <a href="فصل سوم.html"><img src="https://imgurl.ir/uploads/x774922_6_thumb.png" class="thumbnail" alt="x774922_6.png" /></a>
+            <a href="فصل چهارم.html"><img src="https://imgurl.ir/uploads/o770637_7_thumb.png" class="Thumbnail" alt="x774922_6.png" /></a>  
+            <a href="فصل پنجم.html"><img src="https://imgurl.ir/uploads/c93955_8_thumb.png" class="thumbnail" alt="x774922_6.png" /></a>  
+            <a href="فصل ششم.html"><img src="https://imgurl.ir/uploads/v38814_10_thumb.png" class="thumbnail" alt="v38814_10.png" /></a>  
+        </section>
+        <!--<section id="two">-->
+            <a href="فصل هفتم.html"><img src="https://imgurl.ir/uploads/x259914_12_thumb.png" class="thumbnail" alt="x259914_12.png" /></a>
+            <a href="فصل هشتم.html"><img src="https://imgurl.ir/uploads/k764114_13_thumb.png" class="thumbnail" alt="k764114_13.png" /></a>
+            <a href="فصل نهم.html"><img src="https://imgurl.ir/uploads/i52266_11_thumb.png" class="thumbnail" alt="i52266_11.png" /></a>
+            <a href="ماشین حساب شیشه ای/calender.html"><img src="https://imgurl.ir/uploads/m06338_Screenshot_2025-02-19_164929.png" class="thumbnail" alt="n43651_Untitled-1.jpg" />ماشین حساب شیشه ای</a>
+        </section>
+        <section>
+            <div class="container">
+                <h1> چی می خوای اضافه کن</h1>
+                <form id="upload-form" action="https://example.com/upload" method="POST" enctype="multipart/form-data">
+                    <label for="article-upload">این جا اضافه کن:</label>
+                    <input type="file" id="article-upload" name="article" accept=".pdf, .doc, .docx, .txt" required>
+                    <input type="submit" value="اضافه کن">
+                </form>
+            </div>
+        </section>
+        <section>
+            <button id="theme-toggle">روز/شب</button>
+        </section>
+    </main>
+    <script>
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
+    });
+
+    // Set initial theme
+    document.body.classList.add('light-mode');
+    </script>
+</body>
+</html>

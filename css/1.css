@@ -1,0 +1,65 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+body {
+    background-color: rgb(102, 209, 30);
+    font-family: Times New Roman;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+/* Light mode styles */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+/* Dark mode styles */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="file"] {
+    margin-bottom: 20px;
+}
+input[type="submit"] {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #b30000;
+}
+.thumbnail {
+    width: 150px; /* Set the desired width for the thumbnail */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ccc; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
+}
+#prodact, #two {
+    width: 85%;
+    height: 200px;
+    margin: 50px auto;
+}
