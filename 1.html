@@ -6,95 +6,130 @@
     <title>Document</title>
     <style>
     .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 300px;
+}
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+/* Light mode styles */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+/* Dark mode styles */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="file"] {
+    margin-bottom: 20px;
+    width: 100%;
+}
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.thumbnail {
+    width: 150px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+#prodact, #two {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+#auth-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#auth-buttons a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+#auth-buttons a:hover {
+    background-color: #0056b3;
+}
+.tooc {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background-color: aqua;
+    animation: pulse 1.5s infinite;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    .center {
+        width: 80%;
     }
-    body {
-        background-color: rgb(102, 209, 30);
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 20px;
+
+    .thumbnail {
+        width: 100px;
     }
-    /* Light mode styles */
-    body.light-mode {
-        background-color: white;
-        color: black;
-    }
-    /* Dark mode styles */
-    body.dark-mode {
-        background-color: black;
-        color: white;
-    }
+
     .container {
-        max-width: 400px;
-        margin: auto;
-        padding: 20px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        padding: 10px;
     }
-    h1 {
+
+    input[type="submit"] {
+        font-size: 1rem;
+    }
+
+    #auth-buttons {
+        position: static;
+        margin: 10px 0;
         text-align: center;
     }
-    label {
-        display: block;
-        margin-bottom: 10px;
-    }
-    input[type="file"] {
-        margin-bottom: 20px;
-    }
-    input[type="submit"] {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
+
+    #theme-toggle {
         width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        margin-top: 20px;
     }
-    input[type="submit"]:hover {
-        background-color: #0056b3;
-    }
-    .thumbnail {
-        width: 150px; /* Set the desired width for the thumbnail */
-        height: auto; /* Maintain aspect ratio */
-        border: 2px solid #ccc; /* Optional: Add a border */
-        border-radius: 5px; /* Optional: Rounded corners */
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
-    }
-    #prodact, #two {
-        width: 85%;
-        height: 200px;
-        margin: 50px auto;
-    }
-    #auth-buttons {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-
-    #auth-buttons a {
-        margin-left: 10px;
-        text-decoration: none;
-        color: white;
-        background-color: #007bff;
-        padding: 10px 20px;
-        border-radius: 5px;
-    }
-
-    #auth-buttons a:hover {
-        background-color: #0056b3;
-    }
-    .tooc{
-        width: 5em;
-        height: 5em;
-        border-radius: 50%;
-        background-color: aqua;
-        animation: pulse 1.5s infinite;
-    }
+}
     </style>
 </head>
 <body>
