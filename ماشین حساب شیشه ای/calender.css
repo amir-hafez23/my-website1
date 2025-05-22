@@ -43,12 +43,15 @@ html, body {
     align-items: center;
     background-color: #001220;
   }
-  svg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
-  }
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
   .container{
     position: relative;
     background: rgba(255, 255, 255, 0.05);
