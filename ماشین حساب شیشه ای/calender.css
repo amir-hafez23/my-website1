@@ -110,3 +110,17 @@ container{
   .equal{
     background: rgba(255, 255, 255, 0.05);
   }
+@media screen and (max-width: 500px) {
+  .container {
+    transform: scale(0.8);
+  }
+  .value {
+    width: 260px;
+    font-size: 24px;
+  }
+  .calculator span {
+    width: 65px;
+    height: 65px;
+    font-size: 18px;
+  }
+}
