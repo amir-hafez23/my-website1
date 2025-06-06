@@ -3,136 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    max-width: 300px;
-}
-body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-}
-/* Light mode styles */
-body.light-mode {
-    background-color: white;
-    color: black;
-}
-/* Dark mode styles */
-body.dark-mode {
-    background-color: black;
-    color: white;
-}
-.container {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-    text-align: center;
-}
-label {
-    display: block;
-    margin-bottom: 10px;
-}
-input[type="file"] {
-    margin-bottom: 20px;
-    width: 100%;
-}
-input[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-.thumbnail {
-    width: 150px;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-#prodact, #two {
-    width: 90%;
-    margin: 30px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-#auth-buttons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-#auth-buttons a {
-    margin-left: 10px;
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-#auth-buttons a:hover {
-    background-color: #0056b3;
-}
-.tooc {
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
-    background-color: aqua;
-    animation: pulse 1.5s infinite;
-    margin: auto;
-}
-
-@media (max-width: 600px) {
-    .center {
-        width: 80%;
-    }
-
-    .thumbnail {
-        width: 100px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-
-    input[type="submit"] {
-        font-size: 1rem;
-    }
-
-    #auth-buttons {
-        position: static;
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    #theme-toggle {
-        width: 100%;
-        padding: 10px;
-        font-size: 1rem;
-        margin-top: 20px;
-    }
-}
-    </style>
+    <title>خانه</title>
+    <link rel="stylesheet" href="css/1.css">
 </head>
-<body>
+<body class="light-mode">
+     
+<label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider"></span>
+</label>
     <div id="tooc"></div>
     <main>
         <section id="game"></section>
@@ -157,7 +36,7 @@ input[type="submit"]:hover {
         </section>
         <section>
             <div class="container">
-                <h1> چی می خوای اضافه کن</h1>
+                <p><h1> چی می خوای اضافه کن</h1></p>
                 <form id="upload-form" action="https://example.com/upload" method="POST" enctype="multipart/form-data">
                     <label for="article-upload">این جا اضافه کن:</label>
                     <input type="file" id="article-upload" name="article" accept=".pdf, .doc, .docx, .txt" required>
@@ -165,18 +44,17 @@ input[type="submit"]:hover {
                 </form>
             </div>
         </section>
-        <section>
-            <button id="theme-toggle">روز/شب</button>
-        </section>
     </main>
     <script>
-    document.getElementById('theme-toggle').addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        document.body.classList.toggle('light-mode');
-    });
-
-    // Set initial theme
-    document.body.classList.add('light-mode');
+        document.getElementById('theme-toggle').addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+            }
+        });
     </script>
 </body>
 </html>
